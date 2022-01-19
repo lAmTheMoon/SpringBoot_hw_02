@@ -1,8 +1,9 @@
 package ru.netology.springboot;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@org.springframework.boot.autoconfigure.SpringBootApplication(scanBasePackages = "ru.netology.springboot")
+@SpringBootApplication(scanBasePackages = "ru.netology.springboot")
 public class SpringbootApplication {
 
 	public static void main(String[] args) {
