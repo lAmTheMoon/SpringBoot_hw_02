@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class UserRepository {
 
-    private final List<User> userData = List.of(
+    private final List<User> USERS_DATA = List.of(
             new User("Jo", "Sweet", List.of(Authorities.READ, Authorities.WRITE, Authorities.DELETE)),
             new User("Lusa", "Black", List.of(Authorities.READ, Authorities.WRITE)),
             new User("Maks", "Fur", List.of(Authorities.READ)));
@@ -20,6 +20,6 @@ public class UserRepository {
 
     private User getUserFromList(String login, String password) {
         User user = new User(login, password);
-        return userData.stream().filter(u -> u.equals(user)).findFirst().orElse(user);
+        return USERS_DATA.stream().filter(u -> u.equals(user)).findFirst().orElse(user);
     }
 }

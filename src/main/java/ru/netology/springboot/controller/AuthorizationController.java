@@ -14,8 +14,12 @@ import java.util.List;
 @Validated
 public class AuthorizationController {
 
+    private final AuthorizationService service;
+
     @Autowired
-    AuthorizationService service;
+    public AuthorizationController(AuthorizationService service) {
+        this.service = service;
+    }
 
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@RequestParam("user") String user, @RequestParam("password") String password) {
