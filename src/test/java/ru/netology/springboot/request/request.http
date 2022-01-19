@@ -6,4 +6,8 @@ GET http://localhost:8080/authorize?user=Cat&password=Cat
 
 ###
 
-GET http://localhost:8080/authorize?user=&password=Null
+GET http://localhost:8080/authorize?user=&password=
+
+###
+
+GET http://localhost:8080/authorize?user=Jo&password=

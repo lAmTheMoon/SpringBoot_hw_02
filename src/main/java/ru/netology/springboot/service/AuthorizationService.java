@@ -8,6 +8,7 @@ import ru.netology.springboot.exeption_handling.UnauthorizedUser;
 import ru.netology.springboot.model.Authorities;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class AuthorizationService {
@@ -31,10 +32,10 @@ public class AuthorizationService {
     }
 
     private boolean isEmpty(String str) {
-        return str == null || str.isEmpty();
+        return Optional.ofNullable(str).isEmpty();
     }
 
     private boolean isEmpty(List<?> str) {
-        return str == null || str.isEmpty();
+        return Optional.ofNullable(str).isEmpty();
     }
 }
