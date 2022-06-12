@@ -36,6 +36,6 @@ public class AuthorizationService {
     }
 
     private boolean isEmpty(List<?> str) {
-        return Optional.ofNullable(str).isEmpty();
+        return str.isEmpty();
     }
 }
