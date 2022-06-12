@@ -21,6 +21,11 @@ public class AuthorizationController {
         this.service = service;
     }
 
+    @GetMapping("/")
+    public String getHelloFromDockerfile() {
+        return "Hello from Dockerfile!";
+    }
+
     @GetMapping("/authorize")
     public List<Authorities> getAuthorities(@RequestParam("user") String user,
                                             @RequestParam("password") String password) {
